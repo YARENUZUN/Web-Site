@@ -1,0 +1,83 @@
+.sidebar-menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.sidebar{
+    position: fixed;
+    left: -250;
+    width: 250px;
+    height: 100%;
+    background:#042331;
+    color: white;
+    transition: all .5s ease;   /* efekt verdik*/
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 75px;
+    background: #063146;
+    user-select: none;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    padding-left: 35px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .2s;
+}
+.sidebar ul li:hover a{
+    padding-left:45px;
+}
+.sidebar ul a i{
+    margin-right: 15px;
+}
+
+#check{
+    display: none;
+}
+
+label #s-btn, label #s-cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+}
+label #s-btn{
+    left: 40px;
+    top: 25px;
+    font-size: 40px;
+    color: white;
+    margin-top: 25px;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+label #s-cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 90px;
+    font-size: 30px;
+    color: brown;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #s-btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #s-cancel{
+    left: 195px;
+}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>www.yrnegitim.com</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>   <!--sidebar için ekledik-->
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script> <!--animate için-->
+
+        <!---------------en cok kurs butonu----------->
+        <style>
+            #box{
+                position: absolute;
+                width:0;
+                height:0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+          
+<!--search yapımı-->
+<div class="search-main">
+    <input type="text" class="tbox-search" placeholder="Search of...">
+    <a class="search-main">
+        <i class="fa fa-search"></i>
+    </a>
+    <a href="www.yrnegitim.com" style="color: #880404; font-size: large; text-decoration: underline;">www.yrneğitim.com</a>  'a hoşgeldiniz.
+    <button id="encokkurs">En çok tercih edilen kurs</button>^
+    <div id="box">
+
+    </div>
+    
+</div>
+
+<!---------------------menu kısmı----------------->
+        <div class="full-page">
+             <div class="navbar">
+
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html" target="_self">Home</a></li>
+                        <li><a href="about.html" target="_blank">About Us</a></li>
+                        <li><a href="">Trainings</a></li>
+                        <li><a href="languages.html" target="_blank">Languages</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><button class="loginbtn" onclick="document.getElementById('login-form').style.display='block' " style="width: auto;">Login</button></li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <!--login ekranı-->
+            <div id="login-form" class="login-page">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" onclick="login()" class="toggle-btn">Log In</button>
+                        <button type="button" onclick="register()" class="toggle-btn">Register</button>
+                    </div>
+                    <form id="login" class="input-group-login">
+                        <input type="text" class="input-field" placeholder="Email Id" required>
+                        <input type="password" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="check-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-btn">Log in</button>
+                    </form>
+                    <form id="register" class="input-group-register">
+                        <input type="text" class="input-field" placeholder="First Name" required>
+                        <input type="text" class="input-field" placeholder="Last Name" required>
+                        <input type="email" class="input-field" placeholder="Email Id" required>
+                        <input type="password" class="input-field" placeholder="Enter Password" required>
+                        <input type="password" class="input-field" placeholder="Confirm Password" required>
+                        <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                        <button type="submit" class="submit-btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+<!-----------sidebar yapımııı------------->
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="s-btn"></i>
+    <i class="fas fa-times" id="s-cancel"></i>
+</label>
+<div class="sidebar">
+    <header>Yrn Eğitim</header>
+    <ul class="sidebar-menu">
+        <li><a><i class="fas fa-qrcode"></i>Dashboard</a></li>
+        <li><a><i class="fas fa-link"></i>Shortcuts</a></li>
+        <li><a><i class="fas fa-stream"></i>Overviev</a></li>
+        <li><a><i class="fas fa-calendar-week"></i>Events</a></li>
+        <li><a><i class="far fa-question-circle"></i>About</a></li>
+        <li><a><i class="fas fa-sliders-h"></i>Services</a></li>
+        <li><a><i class="far fa-envelope"></i>Contact</a></li>
+        <li><a><i class="fa-regular fa-page"></i>Pages</a></li>
+        <li><a><i class="fa-solid fa-location-dot"></i>Maps</a></li>
+        <li><a><i class="fa-solid fa-map-location"></i>Location</a></li>
+        <li><a><i class="fas fa-qrcode"></i>Dashboard</a></li>
+        
+
+        
+    </ul>
+</div>
+
+<!--About kısmı-->
+<section id="about">
+    <div class="about">
+        <div class="container">
+            <div class="about-title">
+                <h2>ABOUT</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="1.jpg" alt="">
+                </div>
+                <div class="about-text">
+                    <div id="asteriks">
+                        <i class="fas fa-asteriks"></i>
+                    </div>
+                    <p>YRN Eğitim, Kurumumuzun 1983’ten bu yana elektronik haberleşme sektörü alanındaki deneyimi ve 2000 yılından itibaren sürdürdüğü düzenleyici ve denetleyici rolüyle edindiği birikimi tüm paydaşlarına aktarmayı, sertifikasyon eğitimleri ile sektörün ihtiyaç duyduğu yetkin insan kaynağının artırılmasına katkıda bulunmayı amaç edinmiştir.
+                      YRN Eğitim bünyesinde gerçekleştirilen programlar, konusunda uzman iç eğitmenlerimizin yanı sıra, kamu kurum ve kuruluşları, üniversiteler ile ulusal ve uluslararası diğer tüm paydaşlarımızın iş birliği ve katkılarıyla hazırlanmaktadır.</p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Portfalio başlangıcı-->
+<section id="portfolio">
+    <div class="portfolio">
+        <div class="portfolio-item ani1">
+            <img src="11resim.jpg" alt="">
+            <div class="overlay">
+                <i class="fa-brands fa-js"></i>
+            </div>
+        </div>
+        <div class="portfolio-item ani2">
+            <img src="22resim.jpg" alt="">
+            <div class="overlay">
+                <i class="fa-solid fa-c"></i>
+            </div>
+        </div>
+        <div class="portfolio-item ani3">
+            <img src="3resim.jpg" alt="">
+            <div class="overlay">
+            <i class="fa-solid fa-square-c"></i>
+        </div>
+    </div>
+        <div class="portfolio-item ani4">
+            <img src="44resim.jpg" alt="">
+            <div class="overlay">
+            <i class="fa-brands fa-php"></i>
+        </div>
+    </div>
+        <div class="portfolio-item ani5">
+            <img src="5resim.jpg" alt="">
+            <div class="overlay">
+                <i class="fa-brands fa-python"></i>
+            </div>
+        </div>
+        <div class="portfolio-item ani6">
+            <img src="66resim.jpg" alt="">
+            <div class="overlay">
+                <i class="fa-solid fa-database"></i>
+            </div>
+        </div>
+        <div class="portfolio-item ani7">
+            <img src="77resim.jpg" alt="">
+            <div class="overlay">
+                <i class="fa-solid fa-database"></i>
+            </div>
+        </div>
+        <div class="portfolio-item ani8">
+            <img src="8resimek.jpg" alt="">
+            <div class="overlay">
+                <i class="fa-brands fa-golang"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------en cok kurs butonu----------->
+<script>
+    $('#encokkurs').click(function(){
+        $('#box').animate({
+            left:'250px',
+            white:'450px',
+            height:'300px'
+
+        },
+        5000
+        )
+    })
+</script>
+
+<script>
+    var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+</script>
+
+<script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event) 
+        {
+           if (event.target == modal) 
+                {
+                   modal.style.display = "none";
+                }
+        }
+</script>
+
+<script>
+    ScrollReveal().reveal('.ani1',{delay:250});
+    ScrollReveal().reveal('.ani2',{delay:500});
+    ScrollReveal().reveal('.ani3',{delay:750});
+    ScrollReveal().reveal('.ani4',{delay:1000});
+    ScrollReveal().reveal('.ani5',{delay:1250});
+    ScrollReveal().reveal('.ani6',{delay:1500});
+    ScrollReveal().reveal('.ani7',{delay:1750});
+    ScrollReveal().reveal('.ani8',{delay:2000});
+</script>
+
+<!---------------footer kısmı---------------->
+<footer class="bg-dark text-white">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
+                <p>yrneğitim (veya yrneğitim.com), yetişkinlere ve öğrencilere yönelik, alanında profesyonel gönüllü eğitmenler tarafından oluşturulan kursları içeren eğitim teknolojisi, 
+                kitlesel çevrimiçi açık ders ve bir çevrimiçi öğrenme platformudur.</p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Web Tasarımı</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Data Base</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">C++, C#, C</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Java</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Robotik kod</a>
+                    </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">UseFul Links</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">udemy.com</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">yrneğitim.com</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">w3schooll.com</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">btkakademi.com</a>
+                    </p>
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                <p>
+                    <i class="fas fa-home mr-3"></i> Turkey ,TR
+                </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"> yarenuzun.1999@gmail.com</i>
+                </p>
+                <p>
+                    <i class="fas fa-phone mr-3"> +9054 5789 32 11</i>
+                </p>
+                <p>
+                    <i class="fas fa-print mr-3"> 0534 567 89 11</i>
+                </p>
+            </div>
+
+            <hr class="mb-4">
+            <div class="row align-item-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>Copyright 2022 All right reserved by.</p>
+                </div>
+            
+
+            <div class="col-md-5 col-lg-4">
+                <div class="text-center text-md-right">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+</div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
